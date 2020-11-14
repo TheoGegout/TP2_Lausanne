@@ -1,0 +1,158 @@
+@import "../css/reset";
+
+.container {
+  height: 700px;
+  background-image: url(../img/lauzanne_img.jpg);
+  background-size: cover;
+  background-position: right center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  opacity: 0.5;
+  height: 80px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.titre {
+  color: white;
+}
+
+.top-droite {
+  display: flex;
+  align-items: center;
+
+  div {
+    width: 40px;
+  }
+}
+
+.degre {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.icon-top {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  font-size: 23px;
+  font-weight: bold;
+  color: white;
+}
+
+.reseaux-sociaux {
+  display: none;
+}
+
+.menu {
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+  margin: 1px 0px 1px 0px;
+
+  a {
+    display: block;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding: 1.5em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.none {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .icon-top {
+    display: initial;
+  }
+
+  .icon-reseaux {
+    width: 30px;
+    height: 30px;
+    fill: white;
+  }
+
+  .reseaux-sociaux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    background-color: #1f88ce;
+
+    .inner-reseaux {
+      display: flex;
+      background-color: #1f88ce;
+      align-items: center;
+
+      .deroulant {
+        width: 120px;
+        text-align: center;
+        display: none;
+        height: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        padding: 0.8em;
+        font-weight: bold;
+      }
+    }
+
+    .inner-reseaux:hover {
+      background-color: #332b75;
+      margin-left: 120px;
+    }
+
+    .inner-reseaux:hover > .deroulant {
+      display: flex;
+      background-color: #332b75;
+      align-items: center;
+    }
+  }
+
+  .menu > ul {
+    display: flex;
+    li {
+      margin: 0 5px 0 5px;
+      width: 200px;
+    }
+    li:hover {
+      background-color: black;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu {
+    ul {
+      li {
+        width: 300px;
+        a {
+          padding: 3em;
+        }
+      }
+    }
+  }
+}
