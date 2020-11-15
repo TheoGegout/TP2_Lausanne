@@ -1,5 +1,6 @@
+/*Import du Reset*/
 @import "../css/reset";
-
+/*Container de l'ensemble de la page*/
 .container {
   height: 700px;
   background-image: url(../img/lauzanne_img.jpg);
@@ -9,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
+/*Barre de navigation*/
 nav {
   display: flex;
   justify-content: space-between;
@@ -18,15 +19,15 @@ nav {
   opacity: 0.5;
   height: 80px;
 }
-
+/*Logo de la page*/
 .logo {
-  width: 150px;
+  width: 100px;
 }
-
+/*Titre*/
 .titre {
   color: white;
 }
-
+/*icones en haut à droite de la page*/
 .top-droite {
   display: flex;
   align-items: center;
@@ -36,12 +37,12 @@ nav {
     width: 40px;
   }
 }
-
+/*icone de température*/
 .degre {
   font-weight: bold;
   font-size: 15px;
 }
-
+/*icones du haut*/
 .icon-top {
   width: 30px;
   height: 30px;
@@ -50,17 +51,16 @@ nav {
   font-weight: bold;
   color: white;
 }
-
+/*menu des réseaux sociaux*/
 .reseaux-sociaux {
   display: none;
 }
-
+/*menu du footer*/
 .menu {
   margin: 0 auto;
 }
-
+/*div à l'intérieur du footer*/
 .footer > div {
-  list-style: none;
   margin: 1px 0px 1px 0px;
 
   a {
@@ -72,29 +72,34 @@ nav {
     font-weight: bold;
   }
 }
-
+/*classe none pour certains icones*/
 .none {
   display: none;
 }
 
+/*Mise en place du mode Desktop*/
 @media (min-width: 768px) {
+  /*Logo du site*/
   .logo {
     width: 200px;
   }
 
+  /*Boutons en haut à droite*/
   .top-droite {
     width: 180px;
   }
-
+  /*icones du haut de la page*/
   .icon-top {
     display: initial;
   }
-
+  /*icones du menu réseaux sociaux à gauche*/
   .icon-reseaux {
     width: 30px;
     height: 30px;
     fill: white;
   }
+
+  /*Menu des Réseaux Sociaux*/
 
   .reseaux-sociaux {
     display: flex;
@@ -125,7 +130,7 @@ nav {
         font-weight: bold;
       }
     }
-
+    /*Fonctionnanilté du déroulement du menu*/
     .inner-reseaux:hover {
       background-color: #332b75;
       margin-left: 120px;
@@ -138,6 +143,7 @@ nav {
     }
   }
 
+  /*Menu du Footer*/
   .footer {
     display: flex;
     div {
@@ -149,6 +155,24 @@ nav {
       a {
         color: white;
       }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .footer > div {
+    width: 300px;
+    a {
+      padding: 2em;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer > div {
+    width: 400px;
+    a {
+      padding: 3em;
     }
   }
 }
